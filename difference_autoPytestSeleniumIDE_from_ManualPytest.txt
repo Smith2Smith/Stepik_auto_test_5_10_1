@@ -1,0 +1,10 @@
+#difference_autoPytestSeleniumIDE_from_ManualPytest.txt
+#5_10_1_2
+Различие автоматически созданных тестов Pytest экспортированных из SeleniumIDE и ручных тестов Pytest.
+1. В тестах SeleniumIDE_Pytest нет assert
+2. В тестах SeleniumIDE_Pytest происходит избыточный импорт библиотек и классов, например:
+  time, json, from selenium.webdriver.common.keys import Keys и т.п.
+3. В тестах SeleniumIDE_Pytest происходит "прокликивание" текстовых полей перед их заполнением,
+  за счет этого код занимает в 2 раза больше места на каждое поле
+4. В тестах SeleniumIDE_Pytest нет try\finally
+В остальном, очень не плохое подспорье для формирования скриптов для автотестов.
